@@ -1,2 +1,5 @@
 # resort-hotel
-Hotel Resort | Full-Stack Project
+
+<h1>Hotel Resort | Full-Stack Project</h1>
+
+
