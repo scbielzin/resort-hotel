@@ -1,20 +1,20 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import {Home} from "./pages/Home";
-import {Rooms} from "./pages/Rooms";
+import { Home } from "./pages/Home";
+import { Rooms } from "./pages/Rooms";
 import SingleRoom from "./pages/SingleRoom";
 import Error from "./pages/Error";
 
-import {Route, Switch} from "react-router-dom";
-
 function App() {
   return (
-    <>
-    <Route exact path="/" component={Home}/>
-    <Route exact path="/rooms/" component={Rooms}/>
-    <Route exact path="/single-room/" component={SingleRoom}/>
-    </>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/rooms" element={<Rooms />} />
+      <Route exact path="/rooms/:slug" element={<SingleRoom />} />
+      <Route path="*" element={<Error/>}></Route>
+    </Routes>
   );
 }
 
